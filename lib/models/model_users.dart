@@ -1,22 +1,22 @@
-class UserModel {
-  String? name;
-  String? path;
-  String? userId;
-  String? id;
-  UserModel({this.name, this.path, this.userId});
-  UserModel.fromJson(Map data) {
-    this.name = data ['name'];
-    this.path = data ['path'];
-    this.userId = data ['userId'];
-    this.id = data ['id'];
-  }
 
-  Map toJson(){
-    Map data = new Map ();
-    data['name'] = this.name;
-    data['path'] = this.path;
-    data['userId'] = this.userId;
-    data['id'] = this.id;
+class UserModel {
+  String? email;
+  String? password;
+  String? displayName;
+  String? photoUrl;
+  UserModel({this.email, this.password, this.displayName, this.photoUrl});
+  UserModel.fromJson(Map data) {
+    displayName = data['displayName'];
+    email = data['email'];
+    password = data['password'];
+    photoUrl = data['photoUrl'];
+  }
+  Map sendToJson() {
+    Map data= Map();
+    data['displayName'] = displayName;
+    data['email'] = email;
+    data['password'] = password;
+    data['photoUrl'] = photoUrl;
     return data;
   }
 }

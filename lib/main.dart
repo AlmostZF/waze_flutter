@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:learning_dart/pages/initial_screen.dart';
-import 'package:learning_dart/pages/poly_line_screen.dart';
-import 'package:learning_dart/pages/tab_bar.dart';
+import 'package:flutter_application_1/pages/autentication_page.dart';
+import 'package:flutter_application_1/pages/map_page.dart';
+import 'package:flutter_application_1/pages/login_page.dart';
+import 'package:flutter_application_1/pages/register_page.dart';
+import 'package:flutter_application_1/pages/splash_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -10,21 +13,24 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ), 
-      initialRoute: '/',
+        
+        primarySwatch: Colors.teal,
+      ),
+      initialRoute: '/splash_screen',
+      //'/authentication',
       routes: {
-        '/': (context) => TabBarScreen(),
-        '/second': (context) =>  InitialScreen(),
-        '/third': (context) => PolylineScreen()
-      },
+        '/login_page': (context) => LoginScreen(),
+        '/splash_screen': (context) => SplashScreen(),
+        '/authentication': (context) => AuthenticationScreen(),
+        '/register_screen': (context) => RegisterScreen(),
+         '/home_page':(context) => HomePage(),  
+      }
     );
   }
 }
