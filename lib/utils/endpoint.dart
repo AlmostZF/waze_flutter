@@ -1,9 +1,9 @@
 class Endpoint {
   static String get baseUrl =>
       //base url da API;
-  static String get registerImage => '/v1/file';
-  static String get createUser => '/v1/createUser';
-  static String get loginUser => '/v1/loginUser';
-  static String get refreshToken => '/v1/refreshToken';
-  static String get getUser => '/v1/user-by-id/';
+  static String get registerImage => ;//base url da API;
+  static String get createUser => ;//base url da API;
+  static String get loginUser => ;//base url da API;
+  static String get refreshToken => ;//base url da API;
+  static String get getUser => ;//base url da API;
 }
